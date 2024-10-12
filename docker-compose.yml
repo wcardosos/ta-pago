@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  db:
+    image: bitnami/postgresql
+    volumes:
+      - postgres_data:/bitnami/postgresql
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=ta-pago-api
+      - POSTGRESQL_PASSWORD=ta-pago-api
+      - POSTGRESQL_DATABASE=ta-pago-api-db
+volumes:
+  postgres_data:
